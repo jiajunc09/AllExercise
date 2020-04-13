@@ -1,0 +1,76 @@
+Question 1
+
+// **************************************************
+// StringExercise.java
+//
+// Play with String objects
+// **************************************************
+public class StringExercise
+{
+public static void main (String[] args)
+{
+String college = new String ("College of Arts and Sciences");
+String town = " UUM Sintok"; // part (a)
+int stringLength;
+String change1, change2, change3;
+stringLength = (college.length()); // part (b)
+System.out.println (college + " contains " + stringLength + " characters. ");
+change1 = college.toUpperCase(); // part (c)
+System.out.println ("The string is all in upper case: " + change1);
+change2 = change1.replace('O','*'); // part (d)
+System.out.println ("All capital O's are replaced with the asterisk character: " + change2);
+change3 = college.concat(town); // part (e)
+System.out.println ("The final string is " + change3);
+}
+}
+
+Question 2
+
+import java.util.*;
+public class FunnyString{
+public static void main(String[] args){
+Scanner in = new Scanner(System.in);
+System.out.print("Enter Your Favourite Color: ");
+String color = in.nextLine();
+System.out.print("Enter Your Favourite Food: ");
+String food = in.nextLine();
+System.out.print("Enter Your Favourite Animal: ");
+String animal = in.nextLine();
+System.out.print("Enter First Name Of A Friend: ");
+String name = in.nextLine();
+System.out.printf("I had a dream that %s ate a %s %s and said it tasted like %s!",name,color,animal,food);
+}
+}
+
+Question 3
+
+import java.util.*;
+public class FormatDate{
+public static void main(String[] args){
+Scanner in = new Scanner(System.in);
+System.out.print("Enter a date: ");
+String date = in.nextLine();
+String newDateFormat = date.replaceAll("/",".");
+System.out.println("The final string is :" + newDateFormat);
+}
+}
+
+Question 4
+import java.util.*;
+public class FourDigitNumbers{
+public static void main(String[] args){
+Scanner in = new Scanner(System.in);
+int sum = 0;
+String num;
+System.out.print("Enter a four digits number : ");
+num = in.next();
+String stringNum = "";
+for(int i = 0; i< 4; i++){
+System.out.println(num.charAt(i));
+stringNum = String.valueOf(num.charAt(i));
+sum = sum + Integer.parseInt(stringNum);
+}
+System.out.println("The sum of the four digits is " + sum);
+}
+}
+
