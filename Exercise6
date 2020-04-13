@@ -146,9 +146,19 @@ public class TestBook {
     }
     System.out.println("\nTitle of book with the highest price\t\t   : " + mostExpensiveBook);
     System.out.printf("Price\t\t\t\t\t\t   : RM%.2f\n\n", highestPrice);
+    
+    String contain = "The title of book that contain term \"Java\" in title:";
+    String nocontain = "No book contain the term \"Java\" in title";
+    
+    for(int j=0; j<n; j++){
+        if(myLibrary[j].getTitle().indexOf("Java")!=-1)
+           nocontain = contain;
+    }
+    System.out.println(nocontain);
+    
     for(int i=0; i<n; i++){
-        if(myLibrary[i].getTitle().indexOf("Java")!=-1){
-           System.out.println("The title of book that contain term \"Java\" in title: " + myLibrary[i].getTitle());
+        if(myLibrary[i].getTitle().indexOf("Java")==0){
+        System.out.println(myLibrary[i].getTitle());  
         }
     }
   }
